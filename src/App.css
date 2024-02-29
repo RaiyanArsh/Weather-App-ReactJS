@@ -28,7 +28,12 @@ input {
   border-radius: 10px 0 0 10px;
   margin-bottom: 10px;
 }
+button:focus,input:focus{
+  border: none;
+  outline: none;
+}
 button {
+  cursor: pointer;
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;

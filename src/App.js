@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./App.css";
 let clear = require("./assets/images/Clear.jpg");
 let Cloudy = require("./assets/images/Cloudy.jpg");
@@ -11,30 +11,45 @@ let Sunny = require("./assets/images/Sunny.jpg");
 function Apps() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const [timeString, setTimeString] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const day = now.getDate();
+      const month = now.getMonth() + 1; // getMonth() returns 0-11, so add 1
+      const year = now.getFullYear();
+      const newTimeString =
+        hours +
+        ":" +
+        minutes +
+        ":" +
+        seconds +
+        " " +
+        day +
+        "/" +
+        month +
+        "/" +
+        year;
+      setTimeString(newTimeString);
+    };
+
+    // Update the time every second
+    const intervalId = setInterval(updateTime, 1000);
+
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []);
   const apiKey = "8eccafe33ccb89d6f0e49bec42c4a099";
   const apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
+    
+
   //   const API_KEY = "pr3TlBCqSAAqdn7vVISf8WaKcRUI10rQ";
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
-  var day = now.getDate();
-  var month = now.getMonth() + 1; // getMonth() returns 0-11, so add 1
-  var year = now.getFullYear();
-  var timeString =
-    hours +
-    ":" +
-    minutes +
-    ":" +
-    seconds +
-    " " +
-    day +
-    "/" +
-    month +
-    "/" +
-    year;
 
   const handleInputChange = (event) => {
     setCity(event.target.value);
@@ -68,7 +83,7 @@ function Apps() {
       }
 
       const data = await response.json();
-      //   console.log(data)
+        console.log(data)
       setWeatherData(data);
       const a = data.weather[0].main;
       // console.log(a)
@@ -85,6 +100,7 @@ function Apps() {
         document.body.style.backgroundImage = `url(${fog})`;
       }
     } catch (error) {
+      // return('Enter Valid Data')
       console.error("Error fetching weather data:", error.message);
     }
   };
@@ -120,7 +136,7 @@ function Apps() {
                     {/* <p>{getWeatherCondition(weatherData.timelines.minutely[0].values.weatherCode)}</p> */}
                   </h1>
                 </div>
-                <h2>{weatherData.name}</h2>
+                <h2>{weatherData.name+", "+weatherData.sys.country}</h2>
                 <p className="desc">{weatherData.weather[0].description}</p>
                 <p className="Date">{timeString}</p>
                 <div className="HumTemp">
