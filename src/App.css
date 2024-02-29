@@ -1,38 +1,131 @@
+/* App.css */
+body {
+  margin: 0;
+  /* font-family: 'Roboto'; */
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/images/Sunny.jpg");
+  background-size: cover;
+  /* width: 100%;
+  height: 100%; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+input {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 10px;
+}
+button {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* background: rgba(255, 255, 255, 0.8); Fallback color for browsers that don't support backdrop-filter */
+  backdrop-filter: blur(8px); /* Adjust the blur value as needed */
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.weather-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.hot {
+  background-color: #ff7b5c;
+}
+
+.mild {
+  background-color: #aaffa1;
+}
+
+.cold {
+  background-color: #aed4f3;
+}
+
+.icon-temp {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Date {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.HumTemp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Wind {
+  background-color: blue;
+  display: flex;
+  padding: 4px 15px;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Humidity {
+  background-color: green;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+
+.Wind p {
   color: white;
+  margin: 0;
+}
+.Humidity p {
+  color: white;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.desc {
+  font-size: larger;
+  margin: 15px 0 0px 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
 }

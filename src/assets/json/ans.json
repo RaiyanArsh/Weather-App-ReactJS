@@ -1,0 +1,80 @@
+{
+ "timelines": {
+      "minutely": [
+        {
+          "time": "2024-02-28T07:06:00Z",
+          "values": {
+            "cloudBase": 2.13,
+            "cloudCeiling": 2.13,
+            "cloudCover": 75,
+            "dewPoint": 13,
+            "freezingRainIntensity": 0,
+            "humidity": 36,
+            "precipitationProbability": 0,
+            "pressureSurfaceLevel": 911.54,
+            "rainIntensity": 0,
+            "sleetIntensity": 0,
+            "snowIntensity": 0,
+            "temperature": 31.88,
+            "temperatureApparent": 31.46,
+            "uvHealthConcern": 5,
+            "uvIndex": 12,
+            "visibility": 15.96,
+            "weatherCode": 1001,
+            "windDirection": 54.69,
+            "windGust": 5.13,
+            "windSpeed": 2.88
+          }
+        },
+        {
+          "time": "2024-02-28T07:07:00Z",
+          "values": {
+            "cloudBase": 2.13,
+            "cloudCeiling": 2.13,
+            "cloudCover": 74.8,
+            "dewPoint": 12.77,
+            "freezingRainIntensity": 0,
+            "humidity": 35.58,
+            "precipitationProbability": 0,
+            "pressureSurfaceLevel": 911.52,
+            "rainIntensity": 0,
+            "sleetIntensity": 0,
+            "snowIntensity": 0,
+            "temperature": 31.88,
+            "temperatureApparent": 31.4,
+            "uvHealthConcern": 5,
+            "uvIndex": 12,
+            "visibility": 15.96,
+            "weatherCode": 1102,
+            "windDirection": 54.69,
+            "windGust": 5.21,
+            "windSpeed": 2.9
+          }
+        },
+        {
+          "time": "2024-02-28T07:08:00Z",
+          "values": {
+            "cloudBase": 2.13,
+            "cloudCeiling": 2.13,
+            "cloudCover": 74.59,
+            "dewPoint": 12.55,
+            "freezingRainIntensity": 0,
+            "humidity": 35.17,
+            "precipitationProbability": 0,
+            "pressureSurfaceLevel": 911.5,
+            "rainIntensity": 0,
+            "sleetIntensity": 0,
+            "snowIntensity": 0,
+            "temperature": 31.89,
+            "temperatureApparent": 31.35,
+            "uvHealthConcern": 5,
+            "uvIndex": 12,
+            "visibility": 15.97,
+            "weatherCode": 1102,
+            "windDirection": 54.69,
+            "windGust": 5.3,
+            "windSpeed": 2.93
+          }
+        }
+    ]}}
+        
